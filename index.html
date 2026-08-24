@@ -122,8 +122,10 @@
     .pricing-note { font-size: 15px; color: var(--text2); max-width: 680px; line-height: 1.7; margin-bottom: 28px; }
     .pricing-row { display: flex; justify-content: space-between; align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--border); gap: 24px; }
     .pricing-row:last-child { border-bottom: none; }
+    .pricing-row.entry { background: var(--bg2); border: 1px solid var(--border2); border-left: 3px solid var(--orange); border-radius: 6px; padding: 20px 24px; margin-bottom: 8px; }
     .pricing-name { font-size: 16px; color: var(--text); font-weight: 500; }
-    .pricing-name span { display: block; font-size: 13px; color: var(--text2); font-weight: 300; margin-top: 2px; }
+    .pricing-name small { display: inline-block; font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); border: 1px solid rgba(200,78,0,0.35); background: rgba(200,78,0,0.08); padding: 1px 7px; border-radius: 3px; margin-left: 10px; vertical-align: middle; }
+    .pricing-name span { display: block; font-size: 13px; color: var(--text2); font-weight: 300; margin-top: 4px; }
     .pricing-price { font-family: var(--mono); font-size: 16px; color: var(--orange); white-space: nowrap; }
 
     /* VALUE PIN */
@@ -300,7 +302,11 @@
   <section id="engage">
     <div class="section-eyebrow">Engagement</div>
     <h2 class="section-title">Direct engagement tiers.</h2>
-    <p class="pricing-note">Pricing for direct engagements is fixed. An engagement produces a signed, coverage-bounded evidence artifact scoped to your deployment. Retainer and channel-specific arrangements are handled separately, not listed here.</p>
+    <p class="pricing-note">Pricing for direct engagements is fixed. Every engagement produces a signed, coverage-bounded evidence artifact scoped to your deployment and bounded to RTK-1's validated surface. The Focused Adversarial Diagnostic is the entry engagement; its fee is creditable toward a Starter engagement within 60 days. Retainer and channel-specific arrangements are handled separately, not listed here.</p>
+    <div class="pricing-row entry">
+      <div class="pricing-name">Focused Adversarial Diagnostic <small>Entry</small><span>A fixed-scope, point-in-time adversarial campaign against a single deployed LLM feature, exercising RTK-1's validated surface, delivered as one signed, independently verifiable evidence artifact with declared coverage. No re-test, no source review. Fee creditable toward a Starter engagement within 60 days.</span></div>
+      <div class="pricing-price">$10,000</div>
+    </div>
     <div class="pricing-row">
       <div class="pricing-name">Starter<span>Single point-in-time adversarial validation, signed artifact, one revision round.</span></div>
       <div class="pricing-price">$25,000</div>
