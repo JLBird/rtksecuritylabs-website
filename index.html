@@ -13,6 +13,56 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "RTK Security Labs",
+    "url": "https://rtksecuritylabs.com/",
+    "email": "ramon@rtksecuritylabs.com",
+    "foundingDate": "2026",
+    "description": "Independent AI security practice specializing in adversarial testing of large language model (LLM) systems before deployment. Every engagement produces a signed, independently verifiable evidence artifact.",
+    "founder": {
+      "@type": "Person",
+      "name": "Ramon Loya",
+      "jobTitle": "Founder",
+      "url": "https://rtksecuritylabs.com/",
+      "sameAs": [
+        "https://www.linkedin.com/in/ramon-loya1"
+      ]
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "New Braunfels",
+      "addressRegion": "TX",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/ramon-loya1",
+      "https://clutch.co/profile/rtk-security-labs",
+      "https://www.regulations.gov/comment/GSA-GSAR-2026-0331-0051",
+      "https://www.regulations.gov/comment/GSA-GSAR-2026-0331-0052"
+    ],
+    "knowsAbout": [
+      "Adversarial testing of large language models",
+      "Prompt injection and system-prompt extraction (OWASP LLM01)",
+      "Sensitive-information-disclosure and data leakage (OWASP LLM02)",
+      "Signed, independently verifiable evidence artifacts",
+      "OWASP LLM Top 10",
+      "NIST AI Risk Management Framework"
+    ],
+    "makesOffer": {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Adversarial LLM Security Testing",
+        "serviceType": "AI security / adversarial LLM testing",
+        "description": "Adversarial campaigns against deployed and pre-deployment LLM systems, targeting the prompt-injection / system-prompt-extraction surface (OWASP LLM01) and the sensitive-information-disclosure / data-leakage surface (OWASP LLM02). Each engagement produces a signed, independently verifiable evidence artifact recording exactly what was tested and what was observed.",
+        "provider": { "@type": "Organization", "name": "RTK Security Labs" }
+      }
+    }
+  }
+  </script>
   <style>
     :root {
       --bg: #0B0E13;
@@ -156,6 +206,7 @@
       <a href="#verdict">Verdict</a>
       <a href="#verify">Verify</a>
       <a href="#scope">Scope</a>
+      <a href="#record">Record</a>
       <a href="#engage">Engage</a>
     </div>
   </div>
@@ -196,7 +247,7 @@
 
     <div class="coverage-box">
       <span class="cov-label">Coverage statement · verbatim from a signed envelope</span>
-      <span class="cov-pos">Observed across 10 attack sequences totaling 80 attack executions, via provider pyrit, exercising MITRE ATLAS techniques AML.T0051 and AML.T0054, against the target system, with objective: extract system prompt. No unauthorized execution was observed within this surface at the time of testing (T0). This verdict is bounded strictly to the declared surface above.</span><br><br><span class="cov-neg">NOT covered by this evidence: attack vectors, techniques, objectives, model versions, or deployment configurations other than those enumerated; behavior after the freshness window; and all runtime / post-deployment execution, which is outside RTK-1's pre-deployment scope and is ceded to downstream runtime and consequence layers.</span>
+      <span class="cov-pos">Observed across 10 attack sequences totaling 80 attack executions, exercising MITRE ATLAS techniques AML.T0051 and AML.T0054, against the target system, with objective: extract system prompt. No unauthorized execution was observed within this surface at the time of testing (T0). This verdict is bounded strictly to the declared surface above.</span><br><br><span class="cov-neg">NOT covered by this evidence: attack vectors, techniques, objectives, model versions, or deployment configurations other than those enumerated; behavior after the freshness window; and all runtime / post-deployment execution, which is outside RTK-1's pre-deployment scope and is ceded to downstream runtime and consequence layers.</span>
     </div>
   </section>
 
@@ -263,10 +314,11 @@
     <p class="section-body">RTK-1's validated capability is the adversarial path that has been confirmed by running it against known truth and watching every claim hold. Other attack providers and the multi-agent composition work exist in development and are being validated one at a time. We will not present a capability as live until a signed artifact can stand behind it. This is a deliberate constraint, not a limitation we are hiding.</p>
     <div class="roadmap-grid">
       <div class="roadmap-col live">
-        <h4>Validated today</h4>
+        <h4>Signed &amp; independently verifiable today</h4>
         <ul>
-          <li>Crescendo multi-turn adversarial campaign <span class="tag-live">LIVE</span></li>
-          <li>System-prompt-extraction objective testing</li>
+          <li>Crescendo multi-turn adversarial campaign <span class="tag-live">SIGNED</span></li>
+          <li>Prompt-injection / system-prompt-extraction surface (OWASP LLM01)</li>
+          <li>Sensitive-information-disclosure / data-leakage surface (OWASP LLM02)</li>
           <li>C1/C2 empirical verdict with declared coverage</li>
           <li>ECDSA P-256 signing over RFC 8785 + SHA-256</li>
           <li>Standalone independent verification</li>
@@ -284,7 +336,7 @@
         </ul>
       </div>
     </div>
-    <p class="section-body" style="margin-top:28px; font-size:14px; color:var(--text3);">Each item in development becomes "validated today" only after it has been run against known truth and a signed artifact can be independently verified for it. Breadth is earned one provider at a time.</p>
+    <p class="section-body" style="margin-top:28px; font-size:14px; color:var(--text3);">A capability is listed as signed &amp; verifiable only once a signed artifact exists for it that any third party can independently check. "Validated" — a measured error rate against a human reference set — is a stronger, separate bar that is under development and is not claimed here. Breadth, and validation, are earned one at a time.</p>
   </section>
 
   <!-- VALUE PIN -->
@@ -296,6 +348,22 @@
       <div class="attr">— The design constraint RTK-1 is built to satisfy</div>
     </div>
     <p class="section-body" style="margin-top:28px;">A claim that cannot be checked is an assertion, not evidence. A claim that overstates its reach collapses the moment a reviewer finds the seam. RTK-1 is built so that neither failure mode is available to it: every artifact is bounded to what was observed, and every artifact is independently verifiable.</p>
+  </section>
+
+  <!-- PUBLIC RECORD -->
+  <section id="record">
+    <div class="section-eyebrow">On the public record</div>
+    <h2 class="section-title">Federal-record participation, not self-assertion.</h2>
+    <p class="section-body">The same discipline that governs an RTK-1 artifact governs how RTK Security Labs positions itself: what can be pointed to, and verified, rather than claimed. RTK Security Labs' founder is on the public record in the U.S. federal AI procurement rulemaking.</p>
+    <div class="claim-card">
+      <h3>Public filings &amp; appearances</h3>
+      <ul class="claim-list">
+        <li><strong>Written comment — benchmark construction quality</strong> <span>— filed to GSA-GSAR-2026-0331 (August 2026), proposing benchmark construction-quality requirements for federal AI procurement. <a href="https://www.regulations.gov/comment/GSA-GSAR-2026-0331-0051">Read on regulations.gov →</a></span></li>
+        <li><strong>Written comment — independent pre-deployment evaluation / TEVV</strong> <span>— filed to GSA-GSAR-2026-0331 (August 2026), on independent pre-deployment evaluation and test, evaluation, validation &amp; verification. <a href="https://www.regulations.gov/comment/GSA-GSAR-2026-0331-0052">Read on regulations.gov →</a></span></li>
+        <li><strong>Speaker — GSA AI Policy Listening Session</strong> <span>— George Washington University Law School, July 2026.</span></li>
+      </ul>
+    </div>
+    <p class="section-body" style="margin-top:28px;">Methodology is anchored to the OWASP LLM Top 10 and the NIST AI Risk Management Framework. These are public references; neither the OWASP Foundation nor NIST endorses RTK Security Labs.</p>
   </section>
 
   <!-- ENGAGE -->
@@ -343,7 +411,7 @@
         <a href="#verify">Verification</a>
         <a href="#scope">Scope &amp; roadmap</a>
         <a href="https://rtksecuritylabs.com/keys/rtk-key-2026-01.pem">Published key</a>
-        <a href="https://www.linkedin.com/in/ramonloya/">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/ramon-loya1">LinkedIn</a>
       </div>
     </div>
     <div class="footer-meta">
